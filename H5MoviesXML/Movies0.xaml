@@ -1,0 +1,17 @@
+﻿<Window x:Class="H5MoviesXML.Movies0"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H5MoviesXML"
+        mc:Ignorable="d"
+        Title="Valikko" Height="130" Width="360" FontFamily="Rockwell Extra Bold" FontSize="16">
+    <Grid>
+    <StackPanel>
+      <TextBlock Text="Elokuvagalleriat kahdella tavalla" HorizontalAlignment="Center" Foreground="Blue"/>
+      <Button x:Name="btnOpenMovies1" Content="Movies1 simppeli" Click="btnOpenMovies1_Click" />
+      <Button x:Name="btnOpenMovies2" Content="Movies2 lista ja muokkaus" Click="btnOpenMovies2_Click" />
+      <Button x:Name="btnExit" Content="Sulje" Click="btnExit_Click" />
+    </StackPanel>
+  </Grid>
+</Window>

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace H5MoviesXML
 {
   /// <summary>
-  /// Interaction logic for MainWindow.xaml
+  /// Interaction logic for Movies1.xaml
   /// </summary>
-  public partial class MainWindow : Window
+  public partial class Movies1 : Window
   {
-    public MainWindow()
+    public Movies1()
     {
       InitializeComponent();
     }
