@@ -20,9 +20,51 @@ namespace H6DataBindingX3
   /// </summary>
   public partial class MainWindow : Window
   {
+    //modulitason muuttujat
+    HockeyLeague smliiga;
+    List<HockeyTeam> joukkueet;
+    int clicked = 0;
     public MainWindow()
     {
       InitializeComponent();
+      FillMyCombobox();
+      smliiga = new HockeyLeague();
+      joukkueet = smliiga.GetTeams();
+    }
+
+    private void FillMyCombobox()
+    {
+      cbCourses2.Items.Add("IIO12110 Ohjelmistotuotanto");
+      cbCourses2.Items.Add("ZZ1234 Helppoa ruåtsia");
+      cbCourses2.Items.Add("J2EE ");
+    }
+    private void btnSetUser_Click(object sender, RoutedEventArgs e)
+    {
+      //luetaan App.Configista UserName-asetus
+      txtUsername.Text = "Hello: " + H6DataBindingX3.Properties.Settings.Default.UserName;
+    }
+
+    private void btnBind_Click(object sender, RoutedEventArgs e)
+    {
+      myGrid.DataContext = joukkueet;
+    }
+
+    private void btnForward_Click(object sender, RoutedEventArgs e)
+    {
+      clicked++;
+      myGrid.DataContext = joukkueet[clicked];
+    }
+
+    private void btnBackward_Click(object sender, RoutedEventArgs e)
+    {
+      clicked--;
+      myGrid.DataContext = joukkueet[clicked];
+    }
+
+    private void btnShow_Click(object sender, RoutedEventArgs e)
+    {
+      object item = cbCourses.SelectedValue;
+      MessageBox.Show(item.ToString());
     }
   }
 }
