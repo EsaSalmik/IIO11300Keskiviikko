@@ -5,21 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:H5MoviesXML"
         mc:Ignorable="d"
-        Title="Esa's Movies Gallery V2" Height="300" Width="400" FontSize="14">
+        Title="Esa's Movies Gallery V2" Height="300" Width="400" FontSize="12">
     <Window.Resources>
         <DataTemplate x:Key="movieName">
             <StackPanel>
-                <Label Content="{Binding XPath=@Name}" Width="150" Background="CadetBlue" />
+        <Label Content="{Binding XPath=@Name}" Height="24" Width="150" FontSize="16" FontFamily="Playbill" Background="CadetBlue" />
             </StackPanel>
         </DataTemplate>
         <Style x:Key="myStyle" TargetType="{x:Type TextBox}">
            <Setter Property="Width" Value="150" />
-           <Setter Property="FontFamily" Value="Tahoma"/>
+          <Setter Property="FontSize" Value="14"/>
+          <Setter Property="FontFamily" Value="Tahoma"/>
         </Style>
     </Window.Resources>
     <Grid>
         <Grid.DataContext>
-            <XmlDataProvider x:Name="xdpMovies" Source="d:\\Movies.xml" XPath="/Movies/Movie" />
+            <XmlDataProvider x:Name="xdpMovies" Source="c://temp//Movies.xml" XPath="/Movies/Movie" />
         </Grid.DataContext>
         <StackPanel Orientation="Horizontal">
             <!-- Vasemman puoleisessa stackpanelissa elokuvien nimet-->
