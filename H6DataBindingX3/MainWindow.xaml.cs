@@ -66,5 +66,11 @@ namespace H6DataBindingX3
       object item = cbCourses.SelectedValue;
       MessageBox.Show(item.ToString());
     }
+
+    private void btnShowPlayers2_Click(object sender, RoutedEventArgs e)
+    {
+      PlayerWindow win = new PlayerWindow();
+      win.ShowDialog();
+    }
   }
 }
